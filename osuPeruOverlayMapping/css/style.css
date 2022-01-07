@@ -1,0 +1,297 @@
+@font-face {
+    font-family: "VAG Rundschrift D";
+    src: url("../fonts/VAG-Rundschrift-D.ttf");
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+    overflow-y: hidden;
+}
+
+#main {
+    font-size: 20px;
+    font-family: VAG Rundschrift D, Helvetica, sans-serif;
+    font-weight: normal;
+    color: white;
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+    text-shadow: 0px 0px 8px black;
+}
+
+
+/* For red text */
+
+.accent {
+    position: absolute;
+    top: 22px;
+    right: 15px;
+    font-weight: bold;
+    color: var(--accent);
+    text-shadow: 0 0 10px var(--accent2);
+    font-size: 26px;
+}
+
+
+/* ----- Mapping overlay ------- */
+
+#top {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1920px;
+    height: 200px;
+    transition: ease-in-out 500ms;
+    z-index: 0;
+}
+
+.box-bmTitle {
+    position: absolute;
+    top: 140px;
+    left: 20px;
+    width: 350px;
+    height: 55px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #313131, #161616);
+    box-shadow: 0px 5px 20px #000;
+}
+
+#maskBmTitle {
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    width: 315px;
+    height: 100%;
+    overflow: hidden;
+    transition: ease-in-out 500ms;
+}
+
+.over {
+    transform: translate(415px);
+    animation: slide 10s linear infinite;
+}
+
+#bmTitle {
+    position: absolute;
+    top: 12px;
+    width: max-content;
+    font-size: 24px !important;
+}
+
+
+/* mapperInfo should actually be "left" idk, probably changing if adding anything else */
+
+#mapperInfo {
+    position: absolute;
+    left: 0px;
+    width: 500px;
+    height: 1080px;
+    transition: ease-in-out 500ms;
+    z-index: 0;
+}
+
+.box-mapper {
+    position: absolute;
+    bottom: 165px;
+    left: 20px;
+    width: 275px;
+    height: 85px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #313131, #161616);
+    box-shadow: 0px 5px 20px #000;
+}
+
+#mapper {
+    position: absolute;
+    top: 6px;
+    left: 12px;
+    font-size: 28px !important;
+}
+
+#mapperName {
+    position: absolute;
+    top: 40px;
+    left: 12px;
+    font-size: 32px !important;
+}
+
+.odometer.odometer-auto-theme {
+    font-size: 24px !important;
+    font-family: "VAG Rundschrift D", Helvetica, sans-serif !important;
+    font-weight: normal !important;
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner,
+.odometer.odometer-theme-default .odometer-digit .odometer-digit-inner {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    margin-left: -5px !important;
+    margin-right: -5px !important;
+}
+
+
+/* Right Section */
+
+#right {
+    position: absolute;
+    right: 0px;
+    width: 500px;
+    height: 1080px;
+    transition: ease-in-out 500ms;
+    z-index: 0;
+}
+
+:root {
+    --accent: rgb(255, 28, 28);
+    --accent2: rgb(200, 16, 46);
+}
+
+#bmData {
+    position: absolute;
+    right: 125px;
+    bottom: 300px;
+    transition: ease-in-out 500ms;
+}
+
+#bmData .box-stats {
+    position: absolute;
+    width: 130px;
+    height: 60px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #313131, #161616);
+    box-shadow: 0px 5px 20px #000;
+}
+
+#box-ar {
+    right: 0px;
+    bottom: 240px;
+    transition: ease-in-out 500ms;
+}
+
+#box-od {
+    right: 0px;
+    bottom: 160px;
+    transition: ease-in-out 500ms;
+}
+
+#box-cs {
+    right: 0px;
+    bottom: 80px;
+    transition: ease-in-out 500ms;
+}
+
+#box-hp {
+    right: 0px;
+    bottom: 0px;
+    transition: ease-in-out 500ms;
+}
+
+#bmData .odometer {
+    position: absolute;
+    bottom: 11px;
+    right: 18px;
+    font-size: 32px !important;
+}
+
+#bmData .accent {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    font-size: 32px !important;
+}
+
+
+/* Current position pp */
+
+.box-currentpp {
+    position: absolute;
+    right: 125px;
+    bottom: 210px;
+    width: 220px;
+    height: 60px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #313131, #161616);
+    box-shadow: 0px 5px 20px #000;
+}
+
+#pp {
+    position: absolute;
+    bottom: 11px;
+    right: 55px;
+    font-size: 32px !important;
+}
+
+
+/* Max pp archivable */
+
+.box-maxpp {
+    position: absolute;
+    right: 125px;
+    bottom: 120px;
+    width: 200px;
+    height: 60px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #313131, #161616);
+    box-shadow: 0px 5px 20px #000;
+}
+
+#SS {
+    position: absolute;
+    left: 20px;
+    bottom: 12px;
+    font-size: 32px;
+}
+
+#maxpp {
+    position: absolute;
+    bottom: 11px;
+    right: 55px;
+    font-size: 32px !important;
+}
+
+
+/* Mapping Strain/Intensity Graph */
+
+#strainGraph {
+    position: absolute;
+    left: 240px;
+    bottom: 45px;
+    height: 90px;
+    z-index: -1;
+    transition: ease-in-out 500ms;
+}
+
+#progress {
+    position: absolute;
+    bottom: 0px;
+    width: 1110px;
+    height: 90px;
+    overflow: hidden;
+    transition: ease 600ms;
+}
+
+#canvas,
+#canvasSecond {
+    position: absolute;
+    height: 90px;
+    bottom: 0px;
+}
+
+
+/* bmData text horizontal movement */
+
+@keyframes slide {
+    0% {
+        transform: translate(380px);
+    }
+    100% {
+        transform: translate(-100%);
+    }
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+}

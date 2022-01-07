@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>osu!Peru Overlay | Mapping</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/odometr.css">
+    <script src="deps/odometr.js"></script>
+    <script src="deps/countUp.js"></script>
+    <script src="deps/reconnecting-websocket.min.js"></script>
+    <script src="deps/Chart.min.js"></script>
+    <script src="deps/smooth.js"></script>
+</head>
+
+<body>
+    <div id="main">
+        <!-- Mapping overlay -->
+        <div id="top">
+            <div class="box-bmTitle">
+                <div id=maskBmTitle>
+                    <span id="bmTitle"></span>
+                </div>
+            </div>
+        </div>
+        <!-- Fin mapping overlay -->
+        <div id="mapperInfo">
+            <div class="box-mapper">
+                <span id="mapper">Mapper:</span>
+                <span id="mapperName"></span>
+            </div>
+        </div>
+        <div id="right">
+            <div class="box-currentpp">
+                <span id="pp" class="odometer"></span>
+                <span class="accent">pp</span>
+                <span id="SS">Live:</span>
+            </div>
+            <div class="box-maxpp">
+                <span id="maxpp" class="odometer"></span>
+                <span class="accent">pp</span>
+                <span id="SS">SS:</span>
+            </div>
+        </div>
+        <div id="bmData">
+            <div class="box-stats" id="box-ar">
+                <span id="ar" class="odometer"></span>
+                <span class="accent">AR</span>
+            </div>
+            <div class="box-stats" id="box-od">
+                <!-- Random id for od, see index.js -->
+                <span id="od1" class="odometer"></span>
+                <span class="accent">OD</span>
+            </div>
+            <div class="box-stats" id="box-cs">
+                <span id="cs" class="odometer"></span>
+                <span class="accent">CS</span>
+            </div>
+            <div class="box-stats" id="box-hp">
+                <span id="hp" class="odometer"></span>
+                <span class="accent">HP</span>
+            </div>
+        </div>
+        <div id="strainGraph">
+            <div id="basegraph">
+                <canvas id="canvas" width="1110" height="90"></canvas>
+            </div>
+            <div id="progress">
+                <canvas id="canvasSecond" width="1110" height="90"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script defer>
+        {
+            let el = document.getElementsByClassName('odometer');
+            for (i = 0; i < el.length; i++) {
+                od = new Odometer({
+                    el: el[i],
+                    format: '( ddd).dd',
+                    duration: 200
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>

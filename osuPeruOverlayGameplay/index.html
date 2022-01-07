@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>osu!Peru Overlay | Gameplay</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/odometr.css">
+    <script src="deps/odometr.js"></script>
+    <script src="deps/countUp.js"></script>
+    <script src="deps/reconnecting-websocket.min.js"></script>
+    <script src="deps/Chart.min.js"></script>
+    <script src="deps/smooth.js"></script>
+</head>
+
+<body>
+    <!-- Gameplay overlay -->
+    <div id="main">
+        <div id="top">
+            <div class="box-bmTitle">
+                <div id=maskBmTitle>
+                    <span id="bmTitle"></span>
+                </div>
+            </div>
+            <div id="strainGraph">
+                <div id="basegraph">
+                    <canvas id="canvas" width="350" height="80"></canvas>
+                </div>
+                <div id="progress">
+                    <canvas id="canvasSecond" width="350" height="80"></canvas>
+                </div>
+            </div>
+            <div class="box-currentHits">
+                <div class="currentHits">
+                    <span id="hun"></span>
+                    <span id="fiv"></span>
+                    <span id="miss"></span>
+                </div>
+                <div class="mistakesWrapper">
+                    <div id="hunBar">
+                        <hr>
+                    </div>
+                    <div id="fivBar">
+                        <hr>
+                    </div>
+                    <div id="missBar">
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div id="box-sb">
+                <span id="sb"></span>
+            </div>
+        </div>
+        <div id="bottom">
+            <div id="box-currentSr">
+                <span id="currentSr" class="odometer"></span>
+                <span class="accent">SR</span>
+            </div>
+            <div id="box-ur">
+                <span id="ur" class="odometer"></span>
+                <span class="accent">UR</span>
+            </div>
+        </div>
+        <div id="bottom2">
+            <!-- ppFC box first so it doesn't overlap currentpp when on result screen -->
+            <div id="box-ppFC">
+                <span id="ppFC" class="odometer"></span>
+                <span class="accent">pp</span>
+                <span id="live">FC:</span>
+            </div>
+            <div class="box-currentpp">
+                <span id="pp" class="odometer"></span>
+                <span class="accent">pp</span>
+                <span id="live">Live:</span>
+            </div>
+        </div>
+    </div>
+    <!-- Fin gameplay overlay -->
+
+    <script src="index.js"></script>
+    <script defer>
+        {
+            let element = document.getElementsByClassName('odometer');
+            for (i = 0; i < element.length; i++) {
+                od = new Odometer({
+                    el: element[i],
+                    format: '( ddd).dd',
+                    duration: 200
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>
