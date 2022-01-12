@@ -6,12 +6,12 @@ Overlays para gosumemory hechos por integrantes de la comunidad de osu! Perú
 - **osuPeruOverlayGameplay**
     - Autor: [Tulioxpx](https://osu.ppy.sh/users/21914163)
         
-        ![Gameplay overlay](https://raw.githubusercontent.com/osuperu/osuperu-gosumemory-overlay/main/.images/gameplay.png)
+        ![Gameplay overlay](https://raw.githubusercontent.com/osuperu/osuperu-gosumemory-overlay/main/.images/readme/gameplay.png)
 
 - **osuPeruOverlayMapping**
     - Autor: [Tulioxpx](https://osu.ppy.sh/users/21914163)
     
-        ![Mapping overlay](https://raw.githubusercontent.com/osuperu/osuperu-gosumemory-overlay/main/.images/mapping.png)
+        ![Mapping overlay](https://raw.githubusercontent.com/osuperu/osuperu-gosumemory-overlay/main/.images/readme/mapping.png)
 
 ## Instalación
 - Descarga el proyecto desde [aquí](https://github.com/osuperu/osuperu-gosumemory-overlay/releases)
