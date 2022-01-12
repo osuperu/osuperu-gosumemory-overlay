@@ -1,5 +1,5 @@
 # osu!Perú Gosumemory Overlay
-### [English Version](https://github.com/osuperu/osuperu-gosumemory-overlay/blob/main/README_EN.md)
+### [English Version](https://github.com/osuperu/osuperu-gosumemory-overlay/blob/main/README_EN.MD)
 Overlays para gosumemory hechos por integrantes de la comunidad de osu! Perú
 
 ## Lista de overlays
